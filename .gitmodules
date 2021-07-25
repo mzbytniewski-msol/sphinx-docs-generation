@@ -1,0 +1,6 @@
+[submodule "sphinx-docs-part-2"]
+	path = sphinx-docs-part-2
+	url = git@github.com:mzbytniewski-msol/sphinx-docs-part-2.git
+[submodule "sphinx-docs-part-1"]
+	path = sphinx-docs-part-1
+	url = git@github.com:mzbytniewski-msol/sphinx-docs-part-1.git
