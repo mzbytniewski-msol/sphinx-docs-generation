@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    options {
+        quietPeriod(0)
+    }
     stages {
         stage('Checkout submodules') {
             steps {
@@ -8,7 +11,7 @@ pipeline {
         }
         stage('Generate documentation') {
             steps {
-                echo "Generate documentation"
+                sh 'make github'
             }
         }
         stage('Publish documentation') {
