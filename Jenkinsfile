@@ -5,6 +5,11 @@ pipeline {
         timestamps()
     }
     stages {
+        stage('Cleanup workspace') {
+            steps {
+                cleanWs()
+            }
+        }
         stage('Checkout submodules') {
             steps {
                 echo 'Checkout submodules'
