@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh 'make singlehtml'
                 sh 'zip -r ./documentation.zip ${WORKSPACE}/build/*'
-                stash includes: '${WORKSPACE}/build', name: 'build_results'
+                // stash includes: '${WORKSPACE}/build', name: 'build_results'
                 archiveArtifacts artifacts: 'documentation.zip', followSymlinks: false, onlyIfSuccessful: true
             }
         }
