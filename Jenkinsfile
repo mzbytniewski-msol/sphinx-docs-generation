@@ -30,7 +30,6 @@ pipeline {
                 zip -r ./documentation.zip ./singlehtml
                 '''
                 archiveArtifacts artifacts: 'build/documentation.zip', followSymlinks: false, onlyIfSuccessful: true
-                sh 'pwd && ls -l'
                 stash includes: 'build/', name: 'build_results'
             }
         }
