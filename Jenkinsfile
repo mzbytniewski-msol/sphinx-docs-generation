@@ -22,7 +22,7 @@ pipeline {
                 sh 'make singlehtml'
                 sh '''
                 cd ${WORKSPACE}/build/
-                zip -r ./documentation.zip *
+                zip -r ./documentation.zip ./singlehtml
                 '''
                 // archiveArtifacts artifacts: 'documentation.zip', followSymlinks: false, onlyIfSuccessful: true
                 sh 'pwd && ls -l'
