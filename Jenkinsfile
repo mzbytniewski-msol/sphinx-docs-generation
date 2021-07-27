@@ -11,8 +11,14 @@ pipeline {
             }
         }
         stage('Generate documentation') {
+            agent {
+                dockerfile {
+                    label '!master'
+                    args '-v ${WORKSPACE}:/workspace'
+                }
+            }
             steps {
-                sh 'make github'
+                sh 'make singlehtml'
             }
         }
         stage('Publish documentation') {
