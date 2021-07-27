@@ -31,7 +31,7 @@ pipeline {
         }
         stage('Publish documentation') {
             steps {
-                echo "Publish documentation"
+                unstash 'build_results'
             }
         }
     }
