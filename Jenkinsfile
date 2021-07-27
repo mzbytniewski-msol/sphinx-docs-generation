@@ -25,7 +25,8 @@ pipeline {
                 zip -r ./documentation.zip *
                 '''
                 // stash includes: '${WORKSPACE}/build', name: 'build_results'
-                archiveArtifacts artifacts: 'documentation.zip', followSymlinks: false, onlyIfSuccessful: true
+                // archiveArtifacts artifacts: 'documentation.zip', followSymlinks: false, onlyIfSuccessful: true
+                sh 'pwd'
             }
         }
         stage('Publish documentation') {
