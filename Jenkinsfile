@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Checkout submodules') {
             steps {
-                sh 'git submodule update --init --recursive'
+                // sh 'git submodule update --init --recursive'
             }
         }
         stage('Generate documentation') {
